@@ -9,9 +9,9 @@ function App() {
   //    state  set[State] in camelCase you choose the name
   //       |      |                   intial value
   //      \/     \/                  \/
-  const [thing, setThing] = useState(13);
+  const [count, setCount] = useState(1);
 
-  const title = useSetTitle(thing)
+  const title = useSetTitle(count)
 
   return (
     <div className="App">
@@ -20,8 +20,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>You clicked {thing} times</p>
-        <button onClick={() => setThing(thing + 10)}>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
           Click me
         </button>
       </header>
