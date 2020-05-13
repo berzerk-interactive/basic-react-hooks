@@ -1,6 +1,7 @@
 import React from 'react';
 import useSetTitle from './hooks/setTitle'
 import useCountState from './hooks/countState'
+import useCatApi from './hooks/catApi'
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,10 +11,12 @@ function App() {
 
   const title = useSetTitle(count)
 
+  const {data, loading} = useCatApi()
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={data ? data[0].url : logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
