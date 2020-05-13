@@ -1,15 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import useSetTitle from './hooks/setTitle'
+import useCountState from './hooks/countState'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // Declare a new state variable, which we'll call "count"
-  //
-  //    state  set[State] in camelCase you choose the name
-  //       |      |                   intial value
-  //      \/     \/                  \/
-  const [count, setCount] = useState(1);
+
+  const [count, setCount] = useCountState(0);
 
   const title = useSetTitle(count)
 
