@@ -1,6 +1,6 @@
 
 # Basic React Hooks lunch and learn
-## From BERERK [Denver, Colorado's Javascript Pros BERZERK](http://www.BERZERK.io)
+## From BERZERK [Denver, Colorado's Javascript Pros BERZERK](http://www.BERZERK.io)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
