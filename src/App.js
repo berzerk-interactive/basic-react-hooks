@@ -11,12 +11,14 @@ function App() {
 
   const title = useSetTitle(count)
 
-  const {data, loading} = useCatApi()
+  const {data, loading} = useCatApi(count)
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={data ? data[0].url : logo} className="App-logo" alt="logo" />
+
+        <h1>{loading ? 'Loading Cats' : 'This is ameowzing!'}</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

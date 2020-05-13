@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 // This is using the cat api
-function useCatApi() {
+function useCatApi(count) {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null)
   useEffect(()=>{
@@ -16,7 +16,9 @@ function useCatApi() {
       setLoading(false);
     }
     getCats()
-  },[])
+//     !IMPORTANT - deps if no defined it will run on every render, if empty it runs on init only, other wise it watches value
+//     \/
+  },[count])
   return {loading, data};
 }
 
